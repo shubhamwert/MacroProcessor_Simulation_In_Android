@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">MacroProcessorBySHubham</string>
+    <string name="instruction">Instruction</string>
+    <string name="print">\t mov \t edx,\t len \n \t mov \t ecx,\t msg \n \t ebx,1 \n \t mov eax,4 \n \t int 0x80\n</string>
+    <string name="generate">generate</string>
+    <string name="macro_expansion">MAcro expansion</string>
+    <string name="macro_defination">Macro Defination</string>
+    <string name="mdt">MDT</string>
+</resources>
