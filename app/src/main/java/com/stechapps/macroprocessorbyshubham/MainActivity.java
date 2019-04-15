@@ -39,13 +39,13 @@ public class MainActivity extends AppCompatActivity {
         if (!ed1.getText().toString().isEmpty()) {
             AddLine(ed1.getText().toString().split(" ")[0], ed1.getText().toString().split(" ")[1], ed1.getText().toString().split(" ")[2]);
             AddApt(ed1.getText().toString().split(" ")[0], ed1.getText().toString().split(" ")[1], ed1.getText().toString().split(" ")[2]);
-            updateCode(ed1.getText().toString().split(" ")[0],"#"+i,"#"+i+1);
+            updateCode(ed1.getText().toString().split(" ")[0],"#"+i,"#"+(i+1));
             i++;
         }
         if (!ed2.getText().toString().isEmpty()) {
             AddLine(ed2.getText().toString().split(" ")[0], ed2.getText().toString().split(" ")[1], ed2.getText().toString().split(" ")[2]);
             AddApt(ed2.getText().toString().split(" ")[0], ed2.getText().toString().split(" ")[1], ed2.getText().toString().split(" ")[2]);
-            updateCode(ed2.getText().toString().split(" ")[0],"#"+i,"#"+i+1);
+            updateCode(ed2.getText().toString().split(" ")[0],"#"+i,"#"+(i+1));
             i++;
 
         }
@@ -53,28 +53,28 @@ public class MainActivity extends AppCompatActivity {
             AddApt(ed3.getText().toString().split(" ")[0], ed3.getText().toString().split(" ")[1], ed3.getText().toString().split(" ")[2]);
 
         AddLine(ed3.getText().toString().split(" ")[0], ed3.getText().toString().split(" ")[1], ed3.getText().toString().split(" ")[2]);
-            updateCode(ed3.getText().toString().split(" ")[0],"#"+i,"#"+i+1);
+            updateCode(ed3.getText().toString().split(" ")[0],"#"+i,"#"+(i+1));
             i++;
     }
     if (!ed4.getText().toString().isEmpty()) {
         AddApt(ed4.getText().toString().split(" ")[0], ed4.getText().toString().split(" ")[1], ed4.getText().toString().split(" ")[2]);
 
         AddLine(ed4.getText().toString().split(" ")[0], ed4.getText().toString().split(" ")[1], ed4.getText().toString().split(" ")[2]);
-        updateCode(ed4.getText().toString().split(" ")[0],"#"+i,"#"+i+1);
+        updateCode(ed4.getText().toString().split(" ")[0],"#"+i,"#"+(i+1));
         i++;
     }
     if (!ed5.getText().toString().isEmpty()) {
         AddApt(ed5.getText().toString().split(" ")[0], ed5.getText().toString().split(" ")[1], ed5.getText().toString().split(" ")[2]);
 
         AddLine(ed5.getText().toString().split(" ")[0], ed5.getText().toString().split(" ")[1], ed5.getText().toString().split(" ")[2]);
-        updateCode(ed5.getText().toString().split(" ")[0],"#"+i,"#"+i+1);
+        updateCode(ed5.getText().toString().split(" ")[0],"#"+i,"#"+(i+1));
         i++;
     }
     if (!ed6.getText().toString().isEmpty()) {
             AddApt(ed6.getText().toString().split(" ")[0], ed6.getText().toString().split(" ")[1], ed6.getText().toString().split(" ")[2]);
 
             AddLine(ed6.getText().toString().split(" ")[0], ed6.getText().toString().split(" ")[1], ed6.getText().toString().split(" ")[2]);
-        updateCode(ed6.getText().toString().split(" ")[0],"#"+i,"#"+i+1);
+        updateCode(ed6.getText().toString().split(" ")[0],"#"+i,"#"+(i+1));
         i++;
     }
 
@@ -87,14 +87,13 @@ public class MainActivity extends AppCompatActivity {
             s3 = s3.replaceAll("msg", s2);
             s3 = s3.replaceAll("len", s1);
             tv1.setText(s3);
+            LinearLayout ll = findViewById(R.id.Updated_Code);
+            ll.addView(tv1);
+            tv1.requestFocus();
 
 
-        } else {
-            tv1.setText(String.format("\t%s\t%s\t%s", s, s1, s2));
         }
-        LinearLayout ll = findViewById(R.id.Updated_Code);
-        ll.addView(tv1);
-        tv1.requestFocus();
+
     }
 
     private void AddApt(String s, String s1, String s2) {
